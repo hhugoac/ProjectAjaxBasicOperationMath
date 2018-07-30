@@ -13,8 +13,6 @@
     <li><a href="sum.jsp">Sum</a></li>
     <li><a href="rest.jsp">Rest</a></li>
 </ul>
-
-
 <script src="js/script.js"></script>
 </body>
 </html>

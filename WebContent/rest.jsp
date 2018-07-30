@@ -8,7 +8,7 @@
 <title>Ajax Project Basics Operations</title>
 </head>
 <body>
-<h1>Ajax Project Basics Operations Rest</h1>
+<h1>Ajax Project Basics Operations: Rest</h1>
 
 <p>
     <label for="txtNum1">Introduce a number:</label>
@@ -21,7 +21,8 @@
 <p>
     <input type="button" value="Rest" id="btnRest">
 </p>
+<div id="resultRest"></div>
 
-<script src="js/script.js"></script>
+<script src="js/scriptRest.js"></script>
 </body>
 </html>

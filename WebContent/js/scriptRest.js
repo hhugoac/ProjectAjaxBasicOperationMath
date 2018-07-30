@@ -4,11 +4,10 @@ window.onload=
 ()=>
 {
     //Var definition to asigne to the buttons
-    document.getElementById("btnSum").onclick=sumNumbers;
+    document.getElementById("btnRest").onclick=restNumbers;
 
 }
-
-function sumNumbers()
+function restNumbers()
 {
     //this function connects to the servlet & adds the numbers and returns as an answer dynamical web content
 
@@ -17,16 +16,18 @@ function sumNumbers()
     var txtNum2=document.getElementById("txtNum2").value;
 
     //Send the asincron process
-    //xhr.responseType="document";
-    xhr.open("GET","SumServlet?txtNum1="+txtNum1+"&txtNum2="+txtNum2,true);
+    xhr.open("GET","RestServlet?txtNum1="+txtNum1+"&txtNum2="+txtNum2,true);
 
     //Check if the process ends successfuly
-    xhr.onload=functionCallBack;
+    xhr.onload=funcionCallBack;
 
     //Send the process
     xhr.send();
 }
-function functionCallBack()
+function funcionCallBack()
 {
-    document.getElementById("resultSum").innerHTML=xhr.responseText;
-}
+    var responseServlet=JSON.parse(xhr.responseText) ; //Catching the Servlet response as an JSON formmat
+    console.log(responseServlet["Rest"]);
+    document.getElementById("resultRest").innerHTML="The result is "+responseServlet["Rest"];
+    
+} 
